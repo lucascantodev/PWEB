@@ -6,7 +6,7 @@ body {
 
 #div1 {
     position: relative;
-    top: 20rem;
+    top: 10rem;
     color: #e7e7e7;
     text-align: center;
     transition: 0.7s;
@@ -27,7 +27,7 @@ body {
 
 #div2 #button1 {
     position: relative;
-    top: 20rem;
+    top: 13rem;
     pointer-events: auto;
     cursor: pointer;
     background: #e7e7e7;

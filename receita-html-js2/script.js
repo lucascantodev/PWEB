@@ -5,9 +5,6 @@ const botaoEmbaralharCervejas = document.querySelector('.botao-embaralhar-cervej
 
 const cervejas = ['Stella', 'Guiness', 'Desesperados', 'Becks'];
 
-botaoCarregarCervejas.addEventListener('click', carregarCervejas);
-botaoOrdenarCervejas.addEventListener('click', ordenarCervejas);
-botaoEmbaralharCervejas.addEventListener('click', embaralharCervejas);
 
 function carregarCervejas() {
     tbody.innerHTML = '';
@@ -23,3 +20,7 @@ function embaralharCervejas() {
     tbody.innerHTML = '';
     cervejas.sort(() => Math.random() - 0.5).map((cerveja) => (tbody.innerHTML += `<tr><td>${cerveja}</td></tr>`));
 }
+
+botaoCarregarCervejas.addEventListener('click', carregarCervejas);
+botaoOrdenarCervejas.addEventListener('click', ordenarCervejas);
+botaoEmbaralharCervejas.addEventListener('click', embaralharCervejas);

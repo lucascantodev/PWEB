@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="Receita-js-arrow\Global Style">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receita-js-arrow -> Lucas Canto</title>
+</head>
+
+<style>
+    * {
+        margin: 0 auto;
+        padding: 0;
+        color: black;
+        font-family: 'Roboto Mono', monospace;
+        font-size: 20px;
+    }
+
+    body {
+        background-color: #e9a208;
+    }
+
+    .container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 100px;
+        align-items: center;
+        gap: 10px;
+    }
+
+    button {
+        background-color: #e7e7e7;
+        color: black;
+        cursor: pointer;
+        border: none;
+        padding: 5px;
+        border-radius: 3px;
+        letter-spacing: 0.2px;
+        transition: 0.7s;
+    }
+
+    button:hover {
+        background-color: #979191;
+    }
+
+    table {
+        border-collapse: collapse;
+    }
+
+    tr:nth-child(even) {
+        background-color: #40a227;
+    }
+
+    tr:nth-child(odd) {
+        background-color: #307d1c;
+    }
+
+    th {
+        background-color: #274dda;
+    }
+
+    th,
+    td {
+        padding: 12px 22px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <button id="botaoCarregar">Carregando cervejas...</button>
+        <div id="meu amor"></div>
+    </div>
+
+    <script>
+        let cervejas = ["Guiness", "Desperados", "Becks"]
+
+        const carregarDiv = (cervs) => {
+            const div = document.getElementById("meu amor")
+            const cervejasHtml = cervs.map(item => `<h1>${item}</h1>`)
+            div.innerHTML = `${cervejasHtml.join("\n")}`
+
+        }
+
+        let botao = document.getElementById("botaoCarregar")
+        botao.addEventListener("click", () => carregarDiv(cervejas))
+    </script>
+
+</body>
+
+</html>

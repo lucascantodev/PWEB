@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q3-Receita-js-arrow -> Lucas Canto</title>
+</head>
+
+<body>
+
+    <style>
+        * {
+            margin: 0 auto;
+            padding: 0;
+            color: black;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 20px;
+        }
+
+        body {
+            background-color: #e9a208;
+        }
+
+        .container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            margin-top: 100px;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .as {
+            display: inline;
+            padding-bottom: 90px;
+        }
+
+        a {
+            text-decoration: none;
+            background-color: #e7e7e7;
+            color: black;
+            cursor: pointer;
+            border: none;
+            padding: 5px;
+            border-radius: 3px;
+            letter-spacing: 0.2px;
+            transition: 0.7s;
+        }
+
+        a:hover {
+            background-color: #979191;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        tr:nth-child(even) {
+            background-color: #40a227;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #307d1c;
+        }
+
+        th {
+            background-color: #274dda;
+        }
+
+        th,
+        td {
+            padding: 12px 22px;
+        }
+    </style>
+
+    <div class="container">
+        <div class="as">
+            <a id="carregar" target="_self" >Carregar cervejas</a>
+            <a id="ordenar" target="_self" >Ordenar cervejas</a>
+            <a id="embaralhar" target="_self" >Embaralhar cervejas</a>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Cervejas</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+</body>
+
+<script>
+
+    const tbody = document.querySelector('tbody');
+    const cervejas = ['Stella', 'Guiness', 'Desesperados', 'Becks'];
+
+    const carregarCervejas = cerveja => {
+        tbody.innerHTML = '';
+        cervejas.map((item) => (tbody.innerHTML += `<tr><td>${item}</td></tr>`));
+    }
+
+    const ordenarCervejas = cerveja => {
+        tbody.innerHTML = '';
+        cervejas.sort().map((item) => (tbody.innerHTML += `<tr><td>${item}</td></tr>`));
+    }
+
+    const embaralharCervejas = cerveja => {
+        tbody.innerHTML = '';
+        cervejas.sort(() => Math.random() - 0.5).map((item) => (tbody.innerHTML += `<tr><td>${item}</td></tr>`));
+    }
+
+    let linkCarregar = document.getElementById("carregar")
+    let linkOrdenar = document.getElementById("ordenar")
+    let linkEmbaralhar = document.getElementById("embaralhar")
+
+    linkCarregar.addEventListener("click", () => carregarCervejas(cervejas))
+    linkOrdenar.addEventListener("click", () => ordenarCervejas(cervejas))
+    linkEmbaralhar.addEventListener("click", () => embaralharCervejas(cervejas))
+
+    /*
+    ANTES:
+    function transformar(item){..} 
+    
+    DEPOIS:
+    const transformar = (item) => {..}
+    
+    DEPOIS^2:
+    const transformar = item => {..} 
+    
+    DEPOIS^3:
+    const transformar = item => `<h1>${item}</h1>`
+    
+    DEPOIS^4:
+    item => `<h1>${item}</h1>`
+    */
+
+    /*
+    ANTES:
+    function carregarDiv() {...}
+    
+    /* DEPOIS:
+    const carregarDiv = cervs => {
+    const div = document.getElementById("meu amor")
+    const cervejasHtml = cervs.map(item => `<div class="cervejas">${item}</div>`)
+    div.innerHTML = `${cervejasHtml.join("\n")}`
+    }
+    */
+</script>
+
+</html>
