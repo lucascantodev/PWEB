@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>   
+
+   <head>
+      <meta charset='UTF-8'> 
+      <title>Receita-json4 -> Lucas Canto</title>     
+   </head>
+
+   <body>
+
+      <div><button id='botaoCarregar'>Carregando cervejas...</button></div>
+
+      <div id='cervejasDiv'></div>
+
+   </body>   
+
+   <script>
+
+      let cervejas = [
+         {
+            name: 'Guiness',
+            alcohol_level: '10%'
+         },
+         {
+            name: 'Desperados',
+            alcohol_level: '6%'
+         },
+         {
+            name: 'Becks',
+            alcohol_level: '5%'
+         }
+      ]
+
+      //cs é um array de cervejas
+
+      const carregarTable = cs => {
+         /*Acessando os atributos dos objetos com 'DOT NOTATION':
+            const itensHtml = cs.map( item => `<div>${item.name} -- ${item.alcohol_level}</div>`)
+         */
+         
+         const div = document.getElementById('cervejasDiv')
+
+         /*Acessando os atributos dos objetos com 'DESESTRUTURAÇÃO':
+         const itensHtml = cs.map ( ({name, alcohol_level}) => `<div>${name} -- ${alcohol_level}</div>`)
+         */
+
+         /*Acessando os atributos dos objetos com 'BOGAGRANDE': */
+
+         const itensHtml = cs.map( item => `<div>${item['name']} -- ${item['alcohol_level']}</div>` ) 
+
+         div.innerHTML = `${itensHtml.join('\n')}`
+      }
+
+      let botao = document.getElementById('botaoCarregar')
+      botao.addEventListener('click', () => carregarTable(cervejas) )                 
+
+   </script>
+
+</html>

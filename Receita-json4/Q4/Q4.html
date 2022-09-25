@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Receita-json4 -> Lucas Canto</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div>
+            <button class='button'>
+                Loading Beers...
+            </button>
+        </div>
+
+        <!-- <div id='cervejasDiv'></div> -->
+
+        <table>
+            <thead>
+                <tr>
+                    <th class="thead_tr_th-name">Name</th>
+                    <th class="thead_tr_th-alcohol-level">Alcohol Level</th>
+                    <th class="thead_tr_th-alcohol-level">Style</th>
+                    <th class="thead_tr_th-alcohol-level">Bitterness</th>
+                </tdr>
+            </thead>
+            <tbody id="table_beerstbody"></tbody>
+        </table>
+
+        <div id="container_beersdiv"></div>
+
+    </div>
+
+</body>
+
+<style>
+
+    * {
+        margin: 0 auto;
+        padding: 0;
+        color: #D5DDDF;
+        font-family: 'Roboto Mono', monospace;
+        font-size: 20px;
+    }
+
+    body {
+        background-color: #B2C5B2;
+    }
+
+    html {
+        min-height: 100%;
+    }
+
+    .container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 100px;
+        align-items: center;
+        gap: 10px;
+    }
+
+    button {
+        background-color: #e7e7e7;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        color: black;
+        cursor: pointer;
+        border: none;
+        padding: 5px;
+        border-radius: 3px;
+        letter-spacing: 0.2px;
+        transition: 0.7s;
+    }
+
+    button:hover {
+        background-color: #3C5148;
+        color: #D5DDDF;
+    }
+
+    table {
+        border-collapse: collapse;
+        box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+
+    }
+
+    tr:nth-child(even) {
+        background-color: #1B2727;
+    }
+
+    tr:nth-child(odd) {
+        background-color: #1B2727;
+    }
+
+    th {
+        background-color: #3C5148;
+    }
+
+    th,
+    td {
+        padding: 12px 22px;
+        text-align: center;
+    }
+</style>
+
+<script>
+
+    let cervejas = [
+        {
+            name: 'Guiness',
+            alcohol_level: '10%',
+            style: 'Lager',
+            ibu: '20'
+        },
+        {
+            name: 'Desperados',
+            alcohol_level: '6%',
+            style: 'APA',
+            ibu: '15'
+        },
+        {
+            name: 'Becks',
+            alcohol_level: '5%',
+            style: 'Cream Ale',
+            ibu: '36'
+        }
+    ]
+
+    
+    const carregarTable = (id='container_beersdiv', cs) => {
+        const tbody = document.querySelector('tbody')
+        tbody.innerHTML = ''
+        const itensHtml = cervejas.map((item) => (tbody.innerHTML += `<tr><td>${item.name}</td><td>${item.alcohol_level}</td><td>${item.style}</td><td>${item.ibu}</td></tr>`))
+        print.innerHTML = `${itensHtml.join('\n')}`
+    }
+
+    const botao = document.querySelector('.button')
+    botao.addEventListener('click', () => carregarTable('container_beersdiv', cervejas))
+
+</script>
+
+</html>
