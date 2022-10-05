@@ -24,19 +24,16 @@
                     <th class='thead_tr_th-alcohol-level'>Alcohol Level</th>
                     <th class='thead_tr_th-alcohol-level'>Style</th>
                     <th class='thead_tr_th-alcohol-level'>Bitterness</th>
-                </tdr>
+                    </tdr>
             </thead>
             <tbody id='table_beerstbody'></tbody>
         </table>
-
         <div id='container_beersdiv'></div>
-
     </div>
 
 </body>
 
 <style>
-
     * {
         margin: 0 auto;
         padding: 0;
@@ -127,24 +124,23 @@
             ibu: '36'
         }
     ]
-    
-/*     const carregarTable = (itens_thead=['Name', 'Alcohol Level', 'Style', 'Bitterness'], labels=['name', 'alcohol_level', 'style', 'ibu'] , cs) => {
-        let tbody = document.querySelector('table_beerstbody')
-        let thead = document.querySelector('table_thead')
-        tbody.innerHTML = ''
-        thead.innerHTML = ''
-        let itensHtml = itens.map((item) => `<th>${item}</th>`)
-        const itensLabel = `<tr>${itensHtml.join('')}</tr>`
-        thead.innerHTML = itensLabel;
-        
+
+    const thead = document.querySelector(`[id$="thead"]`)
+    const tbody = document.querySelector(`[id$="beerstbody"]`)
+    let button = document.querySelector('.button')
+    button = document.addEventListener("click", () => carregarTable(['Name', 'Alcohol Level', 'Style', 'Bitterness'], cervejas));
+
+    const carregarTable = (labels = ['name', 'alcohol_level', 'style', 'ibu'], cs) => {
+        thead.innerHTML = '';
+        let thead_items = labels.map((item) => `<th>${item}</th>`);
+        let thead_items_tag = `<tr>${thead_items.join('')}</tr>`;
+        thead.innerHTML = thead_items_tag;
         const values = Object.keys(cs[0])
-        let valuesHtml = cs.map((item) => `<tr>${values.map((value) => `<td>${item[value]}</td>`)}</tr>`);
-        const bodyLabel = `<tr>${valuesHtml}</tr>`;
-        tbody.innerHTML = bodyLabel.replaceAll('>,<', '><');
+        let valuesArray = cs.map((item) => `<tr>${values.map((value) => `<td>${item[value]}</td>`)}</tr>`);
+        const tbody_items_tag = `<tr>${valuesArray}</tr>`;
+        tbody.innerHTML = tbody_items_tag.replaceAll(">,<", "><");
     }
 
-    const botao = document.querySelector('.button')
-    botao.addEventListener('click', () => carregarTable('table_beerstbody', 'table_thead', ['Name', 'Alcohol Level', 'Style', 'Bitterness'], cervejas)) */
 
 </script>
 

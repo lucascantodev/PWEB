@@ -24,7 +24,7 @@
                     <th class='thead_tr_th-alcohol-level'>Alcohol Level</th>
                     <th class='thead_tr_th-alcohol-level'>Style</th>
                     <th class='thead_tr_th-alcohol-level'>Bitterness</th>
-                </tdr>
+                    </tdr>
             </thead>
             <tbody id='table_beerstbody'></tbody>
         </table>
@@ -36,7 +36,6 @@
 </body>
 
 <style>
-
     * {
         margin: 0 auto;
         padding: 0;
@@ -127,8 +126,8 @@
             ibu: '36'
         }
     ]
-    
-    const carregarTable = (itens, id='table_beerstbody', cs) => {
+
+    const carregarTable = (itens, id = 'table_beerstbody', cs) => {
 
         const tbody = document.querySelector('tbody')
         tbody.innerHTML = ''
