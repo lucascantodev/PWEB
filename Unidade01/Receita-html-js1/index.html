@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receita-html-js1 -> Lucas Canto</title>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div id="div1">
+            <h1>Guinness</h1>
+        </div>
+        <br>
+        <div id="div2">
+            <button class="button-load" id="button1">Hide DIV! 🙈</button>
+        </div>
+    </div>
+</body>
+
+<script>
+
+    let div = document.getElementById("div1")
+    let botao = document.getElementById("button1")
+    botao.addEventListener("click", toggleDiv)
+    let isVisible = true;
+
+    function toggleDiv() {
+        isVisible = !isVisible;
+        botao.innerHTML = isVisible ? 'Hide DIV! 🙈' : 'Show DIV! 🐵';
+        div.style.opacity = isVisible ? 1 : 0;
+    }
+
+</script>
+
+</html>

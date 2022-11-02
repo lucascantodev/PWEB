@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>ReactZero</title>
+</head>
+
+<body>
+    <div id="app"></div>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script>
+        ReactDOM.render(
+            React.createElement(
+                'table',
+                { border: 5 },
+                React.createElement(
+                    'thead',
+                    null,
+                    React.createElement(
+                        'tr',
+                        null,
+                        React.createElement('th', null, 'Título')
+                    )
+                ),
+                React.createElement(
+                    'tbody',
+                    null,
+                    React.createElement(
+                        'tr',
+                        null,
+                        React.createElement('td', null, 'Elemento 01')
+                    ),
+                    React.createElement(
+                        'tr',
+                        null,
+                        React.createElement('td', null, 'Elemento 02')
+                    ),
+                    React.createElement(
+                        'tr',
+                        null,
+                        React.createElement('td', null, 'Elemento 03')
+                    )
+                )
+            ),
+            document.getElementById('app')
+        );
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+body {
+    background-color: #bf8d22;
+    background-position: center;
+    font-family: 'Roboto Mono', monospace;
+}
+
+#div1 {
+    position: relative;
+    top: 10rem;
+    color: #e7e7e7;
+    text-align: center;
+    transition: 0.7s;
+    height:5rem;
+    padding: 5px;
+    width: 20%;
+    margin: 0 auto;
+    background: #bf8d22;
+    border-radius: 10px;
+    box-shadow:  14px 14px 43px #5e4511, -14px -14px 40px #ffd533;
+
+}
+
+#div2 {
+    padding: 10px;
+    text-align: center;
+}
+
+#div2 #button1 {
+    position: relative;
+    top: 13rem;
+    pointer-events: auto;
+    cursor: pointer;
+    background: #e7e7e7;
+    margin: 0 auto;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: inherit;
+}
