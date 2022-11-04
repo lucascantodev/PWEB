@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>React - 01</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app"></div>
+    <script src="libs/react.js"></script>
+    <script src="libs/react-dom.js"></script>
+    <script src="libs/babel.js"></script>
+    <script type="text/babel">
+
+        let beers = [
+            {
+                name: 'Guiness',
+                alcohol_level: '10%',
+                style: 'Lager',
+                ibu: '20'
+            },
+            {
+                name: 'Desperados',
+                alcohol_level: '6%',
+                style: 'APA',
+                ibu: '15'
+            },
+            {
+                name: 'Becks',
+                alcohol_level: '5%',
+                style: 'Cream Ale',
+                ibu: '36'
+            }
+        ]
+
+        const Header = () => {
+            return <h1 id="header">Welcome to my beer's table!</h1>
+        }
+
+        const BeersTable = () => {
+            return <div id="app">
+                <table id="table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Alcohol</th>
+                            <th>Style</th>
+                            <th>IBU</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        }
+
+        //Como de costume, utilizamos cs como um array de cervejas
+        const loadBeers = cs => {
+            const tbody = document.querySelector('tbody')
+            const itensHtml = cs.map(({ name, alcohol_level, style, ibu }) =>
+            `
+            <table>
+                <tr>
+                    <td>${name}</td>
+                    <td>${alcohol_level}</td>
+                    <td>${style}</td>
+                    <td>${ibu}</td>
+                    </tr>
+            </table>
+            `);
+            tbody.innerHTML = `${itensHtml.join("\n")}`
+        }
+
+        const LoadButton = () => {
+            return <button id="loadButton" onClick={() => loadBeers(beers)}>Click here :D</button>
+            const button = document.getElementById('loadButton');
+        }
+
+        ReactDOM.render(
+            <div>
+                <Header />
+                <LoadButton />
+                <BeersTable />
+            </div>
+            ,
+            document.getElementById("app")
+        )
+    </script>
+</body>
+
+</html>
