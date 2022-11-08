@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>React - 02</title>
+</head>
+
+<body>
+    <div id="app">
+    </div>
+
+    <script src="libs/react.js"></script>
+    <script src="libs/react-dom.js"></script>
+    <script src="libs/babel.js"></script>
+
+    <script type="text/babel">
+
+        class TabelaBebidas extends React.Component {
+            render() {
+                return (
+                    <div>
+                        <h1>{this.props.titulo}</h1>
+                        <table id="tabela" border="1">
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>Marca</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Havana</td>
+                                    <td>Engenho Anísio Santiago</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br/>
+                    </div>
+                );
+            }
+        }
+
+        class List extends React.Component {
+            render() {
+                return (
+                    <div>
+                        <h1>{this.props.titulo}</h1>
+                        <ol>
+                            <li>Existem mais átomos em um único copo de água do que em todos os oceanos da Terra</li>
+                            <li>Se todos os hot dogs que os norte-americanos comem durante 1 ano fossem enfileirados, poderia ser feita uma “ponte” que daria duas vezes a distância entre a Terra e a Lua</li>
+                            <li>O algodão doce foi inventado por um dentista</li>
+                            <li>A água quente congela mais rápido do que a fria</li>
+                            <li>Existem mais carros do que pessoas em Los Angeles</li>
+                        </ol>
+                    </div>
+                );
+            }
+        }
+
+        class Change extends React.Component {
+            render() {
+                return (
+                    <div class="container">
+                        <TabelaBebidas titulo="Não faço ideia do que é essa tabela" />
+                        <List titulo="Curiosidades Inúteis" />
+                    </div>
+                )
+            }
+        }
+
+        ReactDOM.render(
+            <Change />,
+            document.getElementById("app"));
+    </script>
+
+</body>
+
+</html>
