@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ReceitaReact - 3</title>
+</head>
+
+<body>
+    <div id="app"></div>
+    <script src="libs/react.js"></script>
+    <script src="libs/react-dom.js"></script>
+    <script src="libs/babel.js"></script>
+    <script type="text/babel">
+
+        class BeerTable extends React.Component {
+            render() {
+                return (
+                    <div>
+                        <h1>{label}</h1>
+                        <table id="tabela" border="1" width="20%">
+                            <thead>
+                                <tr>
+                                    {headersValue.map((headersValue) => (
+                                        <th key={headersValue}>{headersValue}</th>
+                                    ))}
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {beers.map(({name, alcohol_level, style, ibu }) => (
+                                    <tr key={name}>
+                                        <td>{name}</td>
+                                        <td>{alcohol_level}</td>
+                                        <td>{style}</td>
+                                        <td>{ibu}</td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
+                );
+            }
+        }
+
+        const label = "My table"
+
+        const headersValue = ["Name", "Alcohol", "Style", "IBU"]
+
+        const beers = [
+            {
+                name: 'Desperados',
+                alcohol_level: '6%',
+                style: 'APA',
+                ibu: '15'
+            },
+            {
+                name: 'Becks',
+                alcohol_level: '5%',
+                style: 'Cream Ale',
+                ibu: '36'
+            },
+        ];
+
+        ReactDOM.render(
+            <BeerTable title={label} headers={headersValue} beers={beers} />
+            ,
+            document.getElementById("app"))
+    </script>
+</body>
+
+</html>
