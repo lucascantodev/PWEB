@@ -1,9 +1,17 @@
-<h1 align="center"> <img height="90" src=""> Welcome to my POO projects!</h1>
-<br>
-<h2 align="center"> Projects for the discipline'Web Development' <br> Taught by professor Fabrício Vale </h2>
+## 🟢 Welcome to my Web Development projects!
+## 📚 Taught by professor Fabrício Vale
 
-## <img height="50" src="https://img.icons8.com/external-sbts2018-outline-color-sbts2018/344/external-projects-basic-ui-elements-2.2-sbts2018-outline-color-sbts2018.png" alt="Minha Figura"> Tecnologies:
+## 💻 Technologies I am studying:
 
-## <img height="50" src="https://img.icons8.com/external-sbts2018-flat-sbts2018/344/external-license-basic-ui-elements-2.4-sbts2018-flat-sbts2018.png" alt="Minha Figura"> License:
+<div align="left"style="display: inline-block; padding: auto;">
+  <img align="center" alt="Lucas-HTML" height="50" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"/>
+  <img align="center" alt="Lucas-CSS" height="50" width="50" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg"/>
+  <img align="center" alt="Lucas-Js" height="50" width="50" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg"/>
+  <img align="center" alt="Lucas-React" height="50" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"/>
+  <img align="center" alt="Lucas-Node" height="50" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"/>       
+  <img align="center" alt="Lucas-Next" height="50" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"/>
+</div>
+
+## 📜 License:
 
 This project is under license. See the archive [LICENSE](LICENSE) for more details.<br>
