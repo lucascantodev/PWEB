@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    padding: 20px 20px 60px;
+    max-width: 680px;
+    margin: 0 auto;
+    background-image: linear-gradient(204deg, #8693AB, #84929e);
+    color: white;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.HomeContainer {
+    text-align: center;
+}
+
+.HomeContainer_h1 {
+    margin: 0;
+    text-decoration: underline;
+}
+
+.HomeContainer_ul {
+    list-style: none;
+    padding-top: 35%;
+}
+
+.HomeContainer_ul_li {
+    margin: 50px;
+    display: inline;
+}
+
+.HomeContainer_ul_li_a {
+    text-decoration: none;
+    background-color: #e7e7e7;
+    color: black;
+    cursor: pointer;
+    border: none;
+    padding: 5px;
+    border-radius: 3px;
+    letter-spacing: 0.2px;
+    transition: 0.8s;
+}
+
+.HomeContainer_ul_li_a:hover {
+    background-color: #979191;
+}
+
+.MoviesContainer {
+    text-align: center;
+}
+
+.MoviesContainer_ul {
+    list-style: none;
+}
+
+.MoviesContainer_ul_li {
+    margin: 4px 0;
+    padding: 5px;
+}
+
+.MoviesContainer_ul_li_a {
+    text-decoration: none;
+    background-color: #e7e7e7;
+    color: black;
+    cursor: pointer;
+    border: none;
+    padding: 5px;
+    border-radius: 3px;
+    letter-spacing: 0.2px;
+    transition: 0.8s;
+}
+
+.MoviesContainer_ul_li_a:hover {
+    background-color: #979191;
+}
+
+.MovieContainer {
+    max-width: 300;
+    border: '1px solid black';
+    text-align: center;
+}
+
+.Pathfinder_error {
+    text-align: center;
+    padding-bottom: 35%;
+}
+
+.Pathfinder_loading {
+    text-align: center;
+}
+
+/*
+.PathfinderContainer {
+    text-align: center;
+}
+
+.PathfinderContainer_text {
+
+}
+
+.PathfinderContainer_text_p {
+
+} */
+
+.Pathfinder2_error {
+    text-align: center;
+    padding-bottom: 35%;
+}
+
+.Pathfinder2_loading {
+    text-align: center;
+}
+
+/* LEFT THOSE IN HERE FOR THE FUTURE */
+
+/* .Pathfinder2Container_text {
+    
+}
+
+.Pathfinder2Container {
+}
+
+.Pathfinder2Container_text_p {
+    
+} */
